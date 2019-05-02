@@ -16,7 +16,13 @@ class ProductController extends Controller
     {
         $products = Products::all();
 
-        return view('home.index', compact('products'));
+        return view('products.index', compact('products'));
+    }
+    public function landing()
+    {
+        $products = Products::all();
+
+        return view('welcome', compact('products'));
     }
 
     /**
